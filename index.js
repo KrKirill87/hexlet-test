@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export default function solution(content){
   // BEGIN
   const data = content.split('\n').map((val) => val.slice(0, -1).split(',')).slice(1, -1);
