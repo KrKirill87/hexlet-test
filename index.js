@@ -5,9 +5,8 @@ export default function solution(content){
   const data = content.split('\n').map((val) => val.slice(0, -1).split(',')).slice(1, -1);
   console.log(`Count: ${data.length}`);
 
-  const cities = data.map((val) => val[7]);
-  const sort = _.uniq(cities).sort();
-  console.log(`Cities:${sort.map((val) => ` ${val}`)}`);
+  const sortCities = _.uniq(data.map((val) => val[7])).sort();
+  console.log(`Cities:${sortCities}`);
 
   const sortByHum = data.sort((a, b) => a[3] - b[3]);
   console.log(`Humidity: Min: ${sortByHum[0][3]}, Max: ${sortByHum[sortByHum.length - 1][3]}`);
